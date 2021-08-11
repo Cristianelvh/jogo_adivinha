@@ -7,7 +7,7 @@
     <title>Jogo adivinha</title>
 </head>
 <body>
-    <h3>Adivinhe o número de 0 a 10</h3>
+    <h3>Adivinhe um número de 0 a 10</h3>
     <script>
         function pulaLinha(){
             document.write("br");
@@ -17,13 +17,15 @@
             document.write(frase);
             pulaLinha
         }
-        var numeroPensado = Math.round(Math.random) * 10;
+        var numeroPensado = Math.round(Math.random() * 10);
+        console.log(numeroPensado);
+
         var chute = parseInt(prompt("Digite seu chute!"));
 
         if(chute == numeroPensado){
-            mostra("Você acertou!")    
+            mostra("Você acertou! 👏");    
         } else {
-           mostra("Você errou, tente outra vez!")
+           mostra("Você errou, tente outra vez!");
         }
     </script>
 </body>
