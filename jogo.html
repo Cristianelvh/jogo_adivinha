@@ -7,27 +7,29 @@
     <title>Jogo adivinha</title>
 </head>
 <body>
-    <h3>Adivinhe um número de 0 a 10</h3>
-    <script>
+       <script>
         function pulaLinha(){
-            document.write("br");
-            document.write("br");
+            document.write("<br>");
+            document.write("<br>");
         }
         function mostra(frase){
             document.write(frase);
-            pulaLinha
+            pulaLinha();
         }
-        var numeroPensado = Math.round(Math.random() * 10);
-        console.log(numeroPensado);
         (alert("Adivinhe um número de 0 a 10"))
 
+        var numeroPensado = Math.round(Math.random() * 10);
+        console.log(numeroPensado);
+        
         var chute = parseInt(prompt("Digite seu chute!"));
 
         if(chute == numeroPensado){
-            mostra("Você acertou! 👏");    
+            mostra("Você acertou! 👏");
+            mostra("Fim");   
         } else {
            mostra("Você errou, tente outra vez!");
         }
+
     </script>
 </body>
 </html>
